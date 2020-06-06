@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+}
+
+group 'BLS'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+
+
+}
+
+
+
+dependencies {
+    implementation group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '1.62'
+
+    //implementation 'com.google.guava:guava'
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation group: 'com.google.guava', name: 'guava', version: '28.0-jre'
+
+
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.12.0'
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+    runtime group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.12.0'
+
+
+    // https://mvnrepository.com/artifact/io.vertx/vertx-core
+    compile group: 'io.vertx', name: 'vertx-core', version: '3.8.0'
+
+    // https://mvnrepository.com/artifact/org.miracl.milagro.amcl/milagro-crypto-java
+    compile group: 'org.miracl.milagro.amcl', name: 'milagro-crypto-java', version: '0.4.0'
+    
+    
+    //testImplementation 'org.assertj:assertj-core'
+    //testImplementation 'org.mockito:mockito-core'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // https://mvnrepository.com/artifact/org.assertj/assertj-core
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.8.0'
+
+
+}
